@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementando o ChartJs</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+      </div> 
+</body>
+<script>
+    const labels = [
+      'Janeiro',
+      'Fevereiro',
+      'Março',
+      'Abril',
+      'Maio',
+      'Junho',
+      'Agosto',
+      'Setembro',
+      'Outubro',
+      'Novmebro',
+      'Dezembro',
+      
+
+    ];
+  
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'Temperatura',
+        
+        data: [22, 24, 27, 23, 20, 23, 18, 30, 25, 30, 22, 21],
+      },
+      {
+        label: 'Umidade',
+        backgroundColor: 'rgb(0, 0, 255)',
+        borderColor: 'rgb(0, 0, 255)',
+        data: [90, 89, 93, 87, 80, 88, 82],
+      }
+        
+    ]
+      
+    };
+  
+    const config = {
+      type: 'bar',
+      data: data,
+      options: {}
+    };
+  </script>
+
+  
+  <script>
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+
+</script>
+
+  </html>
